@@ -1,4 +1,5 @@
 @file:Suppress("unused")
+@file:JvmName("Logger")
 
 package software.rsquared.logextensions
 
@@ -36,173 +37,173 @@ class LogConfiguration {
 }
 
 
-fun Any.logVerbose(message: Any?) {
+fun logVerbose(message: Any?) {
 	log(LogLevel.VERBOSE, null, message, null)
 }
 
-fun Any.logVerbose(tag: Tag, message: Any?) {
+fun logVerbose(tag: Tag, message: Any?) {
 	log(LogLevel.VERBOSE, tag, message, null)
 }
 
-fun Any.logVerbose(vararg message: Any?) {
+fun logVerbose(vararg message: Any?) {
 	log(LogLevel.VERBOSE, null, message.joinToString(separator = " "), null)
 }
 
-fun Any.logVerbose(tag: Tag, vararg message: Any?) {
+fun logVerbose(tag: Tag, vararg message: Any?) {
 	log(LogLevel.VERBOSE, tag, message.joinToString(separator = " "), null)
 }
 
-fun Any.logVerbose(th: Throwable?) {
+fun logVerbose(th: Throwable?) {
 	log(LogLevel.VERBOSE, null, null, th)
 }
 
-fun Any.logVerbose(tag: Tag, th: Throwable?) {
+fun logVerbose(tag: Tag, th: Throwable?) {
 	log(LogLevel.VERBOSE, tag, null, th)
 }
 
-fun Any.logVerbose(message: Any?, th: Throwable?) {
+fun logVerbose(message: Any?, th: Throwable?) {
 	log(LogLevel.VERBOSE, null, message, th)
 }
 
-fun Any.logVerbose(tag: Tag, message: Any?, th: Throwable?) {
+fun logVerbose(tag: Tag, message: Any?, th: Throwable?) {
 	log(LogLevel.VERBOSE, tag, message, th)
 }
 
-fun Any.logTrace() {
+fun logTrace() {
 	log(LogLevel.DEBUG, null, "at " + LogConst.FULL_CLASS_NAME + "." + LogConst.METHOD_NAME + LogConst.CODE_LINE, null)
 }
 
-fun Any.logTrace(tag: Tag) {
+fun logTrace(tag: Tag) {
 
 	log(LogLevel.DEBUG, tag, "at " + LogConst.FULL_CLASS_NAME + "." + LogConst.METHOD_NAME + LogConst.CODE_LINE, null)
 }
 
-fun Any.logDebug(message: Any?) {
+fun logDebug(message: Any?) {
 	log(LogLevel.DEBUG, null, message, null)
 }
 
-fun Any.logDebug(tag: Tag, message: Any?) {
+fun logDebug(tag: Tag, message: Any?) {
 	log(LogLevel.DEBUG, tag, message, null)
 }
 
-fun Any.logDebug(vararg message: Any?) {
+fun logDebug(vararg message: Any?) {
 	log(LogLevel.DEBUG, null, message.joinToString(separator = " "), null)
 }
 
-fun Any.logDebug(tag: Tag, vararg message: Any?) {
+fun logDebug(tag: Tag, vararg message: Any?) {
 	log(LogLevel.DEBUG, tag, message.joinToString(separator = " "), null)
 }
 
-fun Any.logDebug(th: Throwable?) {
+fun logDebug(th: Throwable?) {
 	log(LogLevel.DEBUG, null, null, th)
 }
 
-fun Any.logDebug(tag: Tag, th: Throwable?) {
+fun logDebug(tag: Tag, th: Throwable?) {
 	log(LogLevel.DEBUG, tag, null, th)
 }
 
-fun Any.logDebug(message: Any?, th: Throwable?) {
+fun logDebug(message: Any?, th: Throwable?) {
 	log(LogLevel.DEBUG, null, message, th)
 }
 
-fun Any.logDebug(tag: Tag, message: Any?, th: Throwable?) {
+fun logDebug(tag: Tag, message: Any?, th: Throwable?) {
 	log(LogLevel.DEBUG, tag, message, th)
 }
 
-fun Any.logInfo(message: Any?) {
+fun logInfo(message: Any?) {
 
 	log(LogLevel.INFO, null, message, null)
 }
 
-fun Any.logInfo(tag: Tag, message: Any?) {
+fun logInfo(tag: Tag, message: Any?) {
 	log(LogLevel.INFO, tag, message, null)
 }
 
-fun Any.logInfo(vararg message: Any?) {
+fun logInfo(vararg message: Any?) {
 	log(LogLevel.INFO, null, message.joinToString(separator = " "), null)
 }
 
-fun Any.logInfo(tag: Tag, vararg message: Any?) {
+fun logInfo(tag: Tag, vararg message: Any?) {
 	log(LogLevel.INFO, tag, message.joinToString(separator = " "), null)
 }
 
-fun Any.logInfo(th: Throwable?) {
+fun logInfo(th: Throwable?) {
 	log(LogLevel.INFO, null, null, th)
 }
 
-fun Any.logInfo(tag: Tag, th: Throwable?) {
+fun logInfo(tag: Tag, th: Throwable?) {
 	log(LogLevel.INFO, tag, null, th)
 }
 
-fun Any.logInfo(message: Any?, th: Throwable?) {
+fun logInfo(message: Any?, th: Throwable?) {
 	log(LogLevel.INFO, null, message, th)
 }
 
-fun Any.logInfo(tag: Tag, message: Any?, th: Throwable?) {
+fun logInfo(tag: Tag, message: Any?, th: Throwable?) {
 	log(LogLevel.INFO, tag, message, th)
 }
 
-fun Any.logWarning(message: Any?) {
+fun logWarning(message: Any?) {
 	log(LogLevel.WARNING, null, message, null)
 }
 
-fun Any.logWarning(tag: Tag, message: Any?) {
+fun logWarning(tag: Tag, message: Any?) {
 	log(LogLevel.WARNING, tag, message, null)
 }
 
-fun Any.logWarning(vararg message: Any?) {
+fun logWarning(vararg message: Any?) {
 	log(LogLevel.WARNING, null, message.joinToString(separator = " "), null)
 }
 
-fun Any.logWarning(tag: Tag, vararg message: Any?) {
+fun logWarning(tag: Tag, vararg message: Any?) {
 	log(LogLevel.WARNING, tag, message.joinToString(separator = " "), null)
 }
 
-fun Any.logWarning(th: Throwable?) {
+fun logWarning(th: Throwable?) {
 	log(LogLevel.WARNING, null, null, th)
 }
 
-fun Any.logWarning(tag: Tag, th: Throwable?) {
+fun logWarning(tag: Tag, th: Throwable?) {
 	log(LogLevel.WARNING, tag, null, th)
 }
 
-fun Any.logWarning(message: Any?, th: Throwable?) {
+fun logWarning(message: Any?, th: Throwable?) {
 	log(LogLevel.WARNING, null, message, th)
 }
 
-fun Any.logWarning(tag: Tag, message: Any?, th: Throwable?) {
+fun logWarning(tag: Tag, message: Any?, th: Throwable?) {
 	log(LogLevel.WARNING, tag, message, th)
 }
 
-fun Any.logError(message: Any?) {
+fun logError(message: Any?) {
 	log(LogLevel.ERROR, null, message, null)
 }
 
-fun Any.logError(tag: Tag, message: Any?) {
+fun logError(tag: Tag, message: Any?) {
 	log(LogLevel.ERROR, tag, message, null)
 }
 
-fun Any.logError(vararg message: Any?) {
+fun logError(vararg message: Any?) {
 	log(LogLevel.ERROR, null, message.joinToString(separator = " "), null)
 }
 
-fun Any.logError(tag: Tag, vararg message: Any?) {
+fun logError(tag: Tag, vararg message: Any?) {
 	log(LogLevel.ERROR, tag, message.joinToString(separator = " "), null)
 }
 
-fun Any.logError(th: Throwable?) {
+fun logError(th: Throwable?) {
 	log(LogLevel.ERROR, null, null, th)
 }
 
-fun Any.logError(tag: Tag, th: Throwable?) {
+fun logError(tag: Tag, th: Throwable?) {
 	log(LogLevel.ERROR, tag, null, th)
 }
 
-fun Any.logError(message: Any?, th: Throwable?) {
+fun logError(message: Any?, th: Throwable?) {
 	log(LogLevel.ERROR, null, message, th)
 }
 
-fun Any.logError(tag: Tag, message: Any?, th: Throwable?) {
+fun logError(tag: Tag, message: Any?, th: Throwable?) {
 	log(LogLevel.ERROR, tag, message, th)
 }
 
