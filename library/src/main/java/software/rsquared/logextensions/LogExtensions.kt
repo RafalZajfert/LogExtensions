@@ -236,7 +236,7 @@ private fun logcat(level: LogLevel, tag: String, msg: String) {
 		LogLevel.VERBOSE -> Log.v(tag, msg)
 		LogLevel.DEBUG -> Log.d(tag, msg)
 		LogLevel.INFO -> Log.i(tag, msg)
-		LogLevel.WARNING -> Log.i(tag, msg)
+		LogLevel.WARNING -> Log.w(tag, msg)
 		LogLevel.ERROR -> Log.e(tag, msg)
 		LogLevel.SILENT -> {
 		}
