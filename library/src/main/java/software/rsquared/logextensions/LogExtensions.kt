@@ -17,7 +17,7 @@ private const val logcatChunkSize = 3000
 class LogConfiguration {
 	companion object {
 		@JvmField
-		var minLogLevel: LogLevel = LogLevel.VERBOSE
+		var maxLevel: LogLevel = LogLevel.VERBOSE
 
 		@JvmField
 		var defaultTag = LogConst.CODE_LINE
@@ -35,7 +35,6 @@ class LogConfiguration {
 		var overwrittenLevels: Map<LogLevel, LogLevel> = emptyMap()
 	}
 }
-
 
 fun logVerbose(message: Any?) {
 	log(LogLevel.VERBOSE, null, message, null)
@@ -74,7 +73,6 @@ fun logTrace() {
 }
 
 fun logTrace(tag: Tag) {
-
 	log(LogLevel.DEBUG, tag, "at " + LogConst.FULL_CLASS_NAME + "." + LogConst.METHOD_NAME + LogConst.CODE_LINE, null)
 }
 
@@ -209,7 +207,7 @@ fun logError(tag: Tag, message: Any?, th: Throwable?) {
 
 private fun log(lvl: LogLevel, t: Tag?, msg: Any?, throwable: Throwable?) {
 	(LogConfiguration.overwrittenLevels[lvl] ?: lvl)
-			.takeIf { it.isAtLeast(LogConfiguration.minLogLevel) }?.also { level ->
+			.takeIf { it.isAtLeast(LogConfiguration.maxLevel) }?.also { level ->
 				val data = getDataMapFor("$msg${t?.tag ?: LogConfiguration.defaultTag}", level)
 
 				val tag = format(t?.tag ?: LogConfiguration.defaultTag, data)
